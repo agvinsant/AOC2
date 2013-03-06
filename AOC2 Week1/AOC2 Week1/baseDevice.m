@@ -10,4 +10,20 @@
 
 @implementation baseDevice
 
+// synthesize creates get and set methods for each property
+@synthesize features, type, price;
+
+// initializing the base device.
+-(id)init
+{
+    self = [super init];
+    if (self !=nil)
+    {
+        [self setPrice:0];
+        [self setFeatures:nil];
+        type=nil;
+    }
+    return self;
+}
+
 @end
