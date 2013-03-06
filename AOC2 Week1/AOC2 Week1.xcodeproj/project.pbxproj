@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35468A4F16E7809000C2B4E7 /* macFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 35468A4E16E7809000C2B4E7 /* macFactory.m */; };
+		35468A5216E780C600C2B4E7 /* baseDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 35468A5116E780C600C2B4E7 /* baseDevice.m */; };
+		35468A5516E780EE00C2B4E7 /* iMacs.m in Sources */ = {isa = PBXBuildFile; fileRef = 35468A5416E780EE00C2B4E7 /* iMacs.m */; };
+		35468A5816E7810D00C2B4E7 /* macBookPro.m in Sources */ = {isa = PBXBuildFile; fileRef = 35468A5716E7810D00C2B4E7 /* macBookPro.m */; };
+		35468A5B16E7812B00C2B4E7 /* iPads.m in Sources */ = {isa = PBXBuildFile; fileRef = 35468A5A16E7812B00C2B4E7 /* iPads.m */; };
 		355E18D016E630F100FBEE93 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355E18CF16E630F100FBEE93 /* UIKit.framework */; };
 		355E18D216E630F100FBEE93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355E18D116E630F100FBEE93 /* Foundation.framework */; };
 		355E18D416E630F100FBEE93 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355E18D316E630F100FBEE93 /* CoreGraphics.framework */; };
@@ -38,6 +43,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35468A4D16E7809000C2B4E7 /* macFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macFactory.h; sourceTree = "<group>"; };
+		35468A4E16E7809000C2B4E7 /* macFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = macFactory.m; sourceTree = "<group>"; };
+		35468A5016E780C600C2B4E7 /* baseDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = baseDevice.h; sourceTree = "<group>"; };
+		35468A5116E780C600C2B4E7 /* baseDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = baseDevice.m; sourceTree = "<group>"; };
+		35468A5316E780EE00C2B4E7 /* iMacs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iMacs.h; sourceTree = "<group>"; };
+		35468A5416E780EE00C2B4E7 /* iMacs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iMacs.m; sourceTree = "<group>"; };
+		35468A5616E7810D00C2B4E7 /* macBookPro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macBookPro.h; sourceTree = "<group>"; };
+		35468A5716E7810D00C2B4E7 /* macBookPro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = macBookPro.m; sourceTree = "<group>"; };
+		35468A5916E7812B00C2B4E7 /* iPads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPads.h; sourceTree = "<group>"; };
+		35468A5A16E7812B00C2B4E7 /* iPads.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPads.m; sourceTree = "<group>"; };
 		355E18CC16E630F100FBEE93 /* AOC2 Week1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AOC2 Week1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		355E18CF16E630F100FBEE93 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		355E18D116E630F100FBEE93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -127,8 +142,18 @@
 				355E18EA16E630F100FBEE93 /* MainStoryboard_iPad.storyboard */,
 				355E18ED16E630F100FBEE93 /* ViewController.h */,
 				355E18EE16E630F100FBEE93 /* ViewController.m */,
-				355E18D616E630F100FBEE93 /* Supporting Files */,
 				355E190D16E6312F00FBEE93 /* ViewController.xib */,
+				35468A4D16E7809000C2B4E7 /* macFactory.h */,
+				35468A4E16E7809000C2B4E7 /* macFactory.m */,
+				35468A5016E780C600C2B4E7 /* baseDevice.h */,
+				35468A5116E780C600C2B4E7 /* baseDevice.m */,
+				35468A5316E780EE00C2B4E7 /* iMacs.h */,
+				35468A5416E780EE00C2B4E7 /* iMacs.m */,
+				35468A5616E7810D00C2B4E7 /* macBookPro.h */,
+				35468A5716E7810D00C2B4E7 /* macBookPro.m */,
+				35468A5916E7812B00C2B4E7 /* iPads.h */,
+				35468A5A16E7812B00C2B4E7 /* iPads.m */,
+				355E18D616E630F100FBEE93 /* Supporting Files */,
 			);
 			path = "AOC2 Week1";
 			sourceTree = "<group>";
@@ -281,6 +306,11 @@
 				355E18DC16E630F100FBEE93 /* main.m in Sources */,
 				355E18E016E630F100FBEE93 /* AppDelegate.m in Sources */,
 				355E18EF16E630F100FBEE93 /* ViewController.m in Sources */,
+				35468A4F16E7809000C2B4E7 /* macFactory.m in Sources */,
+				35468A5216E780C600C2B4E7 /* baseDevice.m in Sources */,
+				35468A5516E780EE00C2B4E7 /* iMacs.m in Sources */,
+				35468A5816E7810D00C2B4E7 /* macBookPro.m in Sources */,
+				35468A5B16E7812B00C2B4E7 /* iPads.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +501,7 @@
 				355E190916E630F100FBEE93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		355E190A16E630F100FBEE93 /* Build configuration list for PBXNativeTarget "AOC2 Week1Tests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +510,7 @@
 				355E190C16E630F100FBEE93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
