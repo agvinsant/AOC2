@@ -25,7 +25,7 @@
 
 // Calculating the ride time in minutes. Overiding the base.
 
--(void)calcRideTime
+-(void)calculateRideTime
 {
     [self setTimeInMinutes:(timePerMile * numberMiles)];
 }

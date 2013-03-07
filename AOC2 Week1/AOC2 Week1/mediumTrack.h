@@ -10,4 +10,9 @@
 
 @interface mediumTrack : baseTrail
 
+@property int numberMiles;
+@property int timePerMile;
+@property int breakTime;
+
+
 @end

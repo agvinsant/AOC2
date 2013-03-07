@@ -12,7 +12,7 @@
 
 @synthesize bikeType, milesRidden, timeInMinutes;
 
-//Initializing the default trail ride and setting ride time to zero.
+//Initializing the default trail ride and setting ride time to zero. Setting for Gavin's short track ride.
 -(id)init
 {
     self = [super init];
@@ -26,9 +26,9 @@
 }
 
 //Calculation of run time.
--(void)calcRunTime
+-(void)calculateRideTime
 {
-    NSLog(@"The rider can ride for %i minutes.", timeInMinutes);
+    NSLog(@"The rider has ridden for %i minutes.", timeInMinutes);
 }
 
 

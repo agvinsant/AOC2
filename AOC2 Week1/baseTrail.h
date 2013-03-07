@@ -30,5 +30,5 @@ typedef enum
 -(id)init;
 
 //Calculating ride time
--(void)calcRideTime;
+-(void)calculateRideTime;
 @end
