@@ -10,4 +10,11 @@
 
 @interface iPads : baseDevice
 
+@property int padPrice;
+@property int discount;
+@property NSString *employeeDiscount;
+@property int padApp;
+@property float taxes;
+
+
 @end

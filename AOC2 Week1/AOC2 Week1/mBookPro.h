@@ -9,16 +9,8 @@
 #import "baseDevice.h"
 
 @interface mBookPro : baseDevice
-{
-    int size;
-}
 
-typedef enum{
-    STANDARD,
-    RETINA
-} size;
-
-@property int mBookSize;
+@property int mBookPrice;
 @property NSString *screenOptions;
 @property float taxes;
 @property int mBookApp;
