@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		353E93AE16E8D1E700540A41 /* mBookPro.m in Sources */ = {isa = PBXBuildFile; fileRef = 353E93AD16E8D1E700540A41 /* mBookPro.m */; };
-		35468A4F16E7809000C2B4E7 /* macFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 35468A4E16E7809000C2B4E7 /* macFactory.m */; };
-		35468A5216E780C600C2B4E7 /* baseDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 35468A5116E780C600C2B4E7 /* baseDevice.m */; };
-		35468A5516E780EE00C2B4E7 /* iMacs.m in Sources */ = {isa = PBXBuildFile; fileRef = 35468A5416E780EE00C2B4E7 /* iMacs.m */; };
-		35468A5B16E7812B00C2B4E7 /* iPads.m in Sources */ = {isa = PBXBuildFile; fileRef = 35468A5A16E7812B00C2B4E7 /* iPads.m */; };
+		354FC4D816E94B3F00E5D2FA /* trailFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 354FC4D716E94B3F00E5D2FA /* trailFactory.m */; };
+		354FC4DB16E94B5900E5D2FA /* baseTrail.m in Sources */ = {isa = PBXBuildFile; fileRef = 354FC4DA16E94B5900E5D2FA /* baseTrail.m */; };
+		354FC4DE16E94BA100E5D2FA /* shortTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 354FC4DD16E94BA100E5D2FA /* shortTrack.m */; };
+		354FC4E116E94BC400E5D2FA /* mediumTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 354FC4E016E94BC400E5D2FA /* mediumTrack.m */; };
+		354FC4E416E94BE600E5D2FA /* longTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 354FC4E316E94BE600E5D2FA /* longTrack.m */; };
 		355E18D016E630F100FBEE93 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355E18CF16E630F100FBEE93 /* UIKit.framework */; };
 		355E18D216E630F100FBEE93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355E18D116E630F100FBEE93 /* Foundation.framework */; };
 		355E18D416E630F100FBEE93 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355E18D316E630F100FBEE93 /* CoreGraphics.framework */; };
@@ -43,16 +43,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		353E93AC16E8D1E700540A41 /* mBookPro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mBookPro.h; sourceTree = "<group>"; };
-		353E93AD16E8D1E700540A41 /* mBookPro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mBookPro.m; sourceTree = "<group>"; };
-		35468A4D16E7809000C2B4E7 /* macFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macFactory.h; sourceTree = "<group>"; };
-		35468A4E16E7809000C2B4E7 /* macFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = macFactory.m; sourceTree = "<group>"; };
-		35468A5016E780C600C2B4E7 /* baseDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = baseDevice.h; sourceTree = "<group>"; };
-		35468A5116E780C600C2B4E7 /* baseDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = baseDevice.m; sourceTree = "<group>"; };
-		35468A5316E780EE00C2B4E7 /* iMacs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iMacs.h; sourceTree = "<group>"; };
-		35468A5416E780EE00C2B4E7 /* iMacs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iMacs.m; sourceTree = "<group>"; };
-		35468A5916E7812B00C2B4E7 /* iPads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPads.h; sourceTree = "<group>"; };
-		35468A5A16E7812B00C2B4E7 /* iPads.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPads.m; sourceTree = "<group>"; };
+		354FC4D616E94B3F00E5D2FA /* trailFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = trailFactory.h; path = ../trailFactory.h; sourceTree = "<group>"; };
+		354FC4D716E94B3F00E5D2FA /* trailFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = trailFactory.m; path = ../trailFactory.m; sourceTree = "<group>"; };
+		354FC4D916E94B5900E5D2FA /* baseTrail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = baseTrail.h; path = ../baseTrail.h; sourceTree = "<group>"; };
+		354FC4DA16E94B5900E5D2FA /* baseTrail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = baseTrail.m; path = ../baseTrail.m; sourceTree = "<group>"; };
+		354FC4DC16E94BA100E5D2FA /* shortTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shortTrack.h; sourceTree = "<group>"; };
+		354FC4DD16E94BA100E5D2FA /* shortTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shortTrack.m; sourceTree = "<group>"; };
+		354FC4DF16E94BC400E5D2FA /* mediumTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mediumTrack.h; sourceTree = "<group>"; };
+		354FC4E016E94BC400E5D2FA /* mediumTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mediumTrack.m; sourceTree = "<group>"; };
+		354FC4E216E94BE600E5D2FA /* longTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = longTrack.h; sourceTree = "<group>"; };
+		354FC4E316E94BE600E5D2FA /* longTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = longTrack.m; sourceTree = "<group>"; };
 		355E18CC16E630F100FBEE93 /* AOC2 Week1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AOC2 Week1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		355E18CF16E630F100FBEE93 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		355E18D116E630F100FBEE93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -136,6 +136,16 @@
 		355E18D516E630F100FBEE93 /* AOC2 Week1 */ = {
 			isa = PBXGroup;
 			children = (
+				354FC4E216E94BE600E5D2FA /* longTrack.h */,
+				354FC4E316E94BE600E5D2FA /* longTrack.m */,
+				354FC4DF16E94BC400E5D2FA /* mediumTrack.h */,
+				354FC4E016E94BC400E5D2FA /* mediumTrack.m */,
+				354FC4DC16E94BA100E5D2FA /* shortTrack.h */,
+				354FC4DD16E94BA100E5D2FA /* shortTrack.m */,
+				354FC4D916E94B5900E5D2FA /* baseTrail.h */,
+				354FC4DA16E94B5900E5D2FA /* baseTrail.m */,
+				354FC4D616E94B3F00E5D2FA /* trailFactory.h */,
+				354FC4D716E94B3F00E5D2FA /* trailFactory.m */,
 				355E18DE16E630F100FBEE93 /* AppDelegate.h */,
 				355E18DF16E630F100FBEE93 /* AppDelegate.m */,
 				355E18E716E630F100FBEE93 /* MainStoryboard_iPhone.storyboard */,
@@ -143,16 +153,6 @@
 				355E18ED16E630F100FBEE93 /* ViewController.h */,
 				355E18EE16E630F100FBEE93 /* ViewController.m */,
 				355E190D16E6312F00FBEE93 /* ViewController.xib */,
-				35468A4D16E7809000C2B4E7 /* macFactory.h */,
-				35468A4E16E7809000C2B4E7 /* macFactory.m */,
-				35468A5016E780C600C2B4E7 /* baseDevice.h */,
-				35468A5116E780C600C2B4E7 /* baseDevice.m */,
-				35468A5316E780EE00C2B4E7 /* iMacs.h */,
-				35468A5416E780EE00C2B4E7 /* iMacs.m */,
-				353E93AC16E8D1E700540A41 /* mBookPro.h */,
-				353E93AD16E8D1E700540A41 /* mBookPro.m */,
-				35468A5916E7812B00C2B4E7 /* iPads.h */,
-				35468A5A16E7812B00C2B4E7 /* iPads.m */,
 				355E18D616E630F100FBEE93 /* Supporting Files */,
 			);
 			path = "AOC2 Week1";
@@ -306,11 +306,11 @@
 				355E18DC16E630F100FBEE93 /* main.m in Sources */,
 				355E18E016E630F100FBEE93 /* AppDelegate.m in Sources */,
 				355E18EF16E630F100FBEE93 /* ViewController.m in Sources */,
-				35468A4F16E7809000C2B4E7 /* macFactory.m in Sources */,
-				35468A5216E780C600C2B4E7 /* baseDevice.m in Sources */,
-				35468A5516E780EE00C2B4E7 /* iMacs.m in Sources */,
-				35468A5B16E7812B00C2B4E7 /* iPads.m in Sources */,
-				353E93AE16E8D1E700540A41 /* mBookPro.m in Sources */,
+				354FC4D816E94B3F00E5D2FA /* trailFactory.m in Sources */,
+				354FC4DB16E94B5900E5D2FA /* baseTrail.m in Sources */,
+				354FC4DE16E94BA100E5D2FA /* shortTrack.m in Sources */,
+				354FC4E116E94BC400E5D2FA /* mediumTrack.m in Sources */,
+				354FC4E416E94BE600E5D2FA /* longTrack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
