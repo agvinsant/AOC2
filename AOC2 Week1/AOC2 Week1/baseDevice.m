@@ -21,9 +21,16 @@
     {
         [self setPrice:0];
         [self setFeatures:nil];
-        type=nil;
+        [self setType:nil];
+        
     }
     return self;
+}
+
+// calculation/manipulation to find cost of the device with tax and addons
+-(void)calculatePrice
+{
+    NSLog(@"So I just walked into the Apple Store looking for a new toy. So far my total today is %i dollars.", price);
 }
 
 @end

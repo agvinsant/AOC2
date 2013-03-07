@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "baseDevice.h"
 #import "iMacs.h"
-#import "macBookPro.h"
+#import "mBookPro.h"
 #import "iPads.h"
 
 @interface macFactory : NSObject
