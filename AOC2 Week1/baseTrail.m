@@ -10,4 +10,26 @@
 
 @implementation baseTrail
 
+@synthesize bikeType, milesRidden, timeInMinutes;
+
+//Initializing the default trail ride and setting ride time to zero.
+-(id)init
+{
+    self = [super init];
+    if (self != nil)
+    {
+        [self setTimeInMinutes:0];
+        [self setBikeType:nil];
+        [self setMilesRidden:nil];
+    }
+    return self;
+}
+
+//Calculation of run time.
+-(void)calcRunTime
+{
+    NSLog(@"The rider can ride for %i minutes.", timeInMinutes);
+}
+
+
 @end

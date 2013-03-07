@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "baseTrail.h"
+#import "shortTrack.h"
+#import "mediumTrack.h"
+#import "longTrack.h"
 
 @interface trailFactory : NSObject
+
++(baseTrail*)newTrailRide:(int)bikerType;
 
 @end

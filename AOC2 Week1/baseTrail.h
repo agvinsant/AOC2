@@ -10,4 +10,25 @@
 
 @interface baseTrail : NSObject
 
+{
+    int bikerEnum;
+}
+
+typedef enum
+{
+    GAVIN,
+    SHELLY,
+    ADAM
+} bikerEnum;
+
+//data for runners, array of shoes, run time in minutes, miles
+@property NSArray *bikeType;
+@property NSString *milesRidden;
+@property int timeInMinutes;
+
+//Initalize
+-(id)init;
+
+//Calculating ride time
+-(void)calcRideTime;
 @end

@@ -10,4 +10,24 @@
 
 @implementation shortTrack
 
+@synthesize numberMiles, timeInMinutes, timePerMile;
+
+-(id)init
+{
+    self = [super init];
+    if (self != nil)
+    {
+        [self setNumberMiles:0];
+        [self setTimePerMile:0];
+    }
+    return self;
+}
+
+// Calculating the ride time in minutes. Overiding the base.
+
+-(void)calcRideTime
+{
+    [self setTimeInMinutes:(timePerMile * numberMiles)];
+}
+
 @end
