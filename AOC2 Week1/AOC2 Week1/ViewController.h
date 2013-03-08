@@ -18,7 +18,12 @@
     UILabel *shortCalc;
     UILabel *mediumCalc;
     UILabel *longCalc;
+    UIButton *shortButton;
+    UIButton *mediumButton;
+    UIButton *longButton;
     
 }
+
+- (void)onClick: (UIButton*)button;
 
 @end

@@ -84,72 +84,30 @@
     [self.view addSubview:longCalc];
 
     
-    // Creating the short track ride data for Gavin
-    
-    shortTrack *gavinRide = (shortTrack*)[trailFactory createNewTrailRide:GAVIN];
-    [gavinRide setNumberMiles:5];
-    [gavinRide setTimePerMile:6];
-    
-    if (gavinRide !=nil)
-    {
         
-        NSArray *gavinBike = [[NSArray alloc]initWithObjects:@"20 inch BMX bike", nil];
-        NSMutableString *bike = [[NSMutableString alloc]initWithString:@""];
-        for (int i=0; i<[gavinBike count];i++)
-        {
-            [bike insertString:([gavinBike objectAtIndex:0]) atIndex:0];
-        }
-        [gavinRide setBikeType:gavinBike];
-        [gavinRide calculateRideTime];
-        shortLabel.text = [NSString stringWithFormat:@"Gavin is riding a %@ .", bike];
-        shortCalc.text = [NSString stringWithFormat:@"Miles: %i, Minutes: %i", gavinRide.numberMiles, gavinRide.timeInMinutes];
-    }
-    
-    
-    //Creating the medium track data for Shelly
-    
-    mediumTrack *shellyRide = (mediumTrack*)[trailFactory createNewTrailRide:SHELLY];
-    [shellyRide setNumberMiles:15];
-    [shellyRide setTimePerMile:5];
-    [shellyRide setBreakTime:10];
-    
-    if (shellyRide !=nil)
-    {
         
-        NSArray *shellyBike = [[NSArray alloc]initWithObjects:@"cruiser bike", nil];
-        NSMutableString *bike = [[NSMutableString alloc]initWithString:@""];
-        for (int i=0; i<[shellyBike count];i++)
-        {
-            [bike insertString:([shellyBike objectAtIndex:0]) atIndex:0];
-        }
-        [shellyRide setBikeType:shellyBike];
-        [shellyRide calculateRideTime];
-        mediumLabel.text = [NSString stringWithFormat:@"Shelly is riding a %@ .", bike];
-        mediumCalc.text = [NSString stringWithFormat:@"Miles: %i, Time: %i mins, Breaks: %i mins", shellyRide.numberMiles, shellyRide.timeInMinutes, shellyRide.breakTime];
-    }
+        // Going a little above and beyond... Adding info button functions to activate the labels... :)
     
+    // Short info button
+    shortButton = [UIButton buttonWithType: UIButtonTypeInfoLight];
+    shortButton.frame = CGRectMake(300.0f, 140.0f, 20.0f, 20.0f);
+    shortButton.tag = 0;
+    [shortButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:shortButton];
     
-    // Creating the long track data for Adam
+    // Medium info button
+    mediumButton = [UIButton buttonWithType: UIButtonTypeInfoLight];
+    mediumButton.frame = CGRectMake(300.0f, 330.0f, 20.0f, 20.0f);
+    mediumButton.tag = 1;
+    [mediumButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:mediumButton];
     
-    longTrack *adamRide = (longTrack*)[trailFactory createNewTrailRide:ADAM];
-    [adamRide setNumberMiles:30];
-    [adamRide setTimeEachMile:4];
-    [adamRide setBreakTime:15];
-    
-    if (adamRide !=nil)
-    {
-        
-        NSArray *adamBike = [[NSArray alloc]initWithObjects:@"hybrid road bike", nil];
-        NSMutableString *bike = [[NSMutableString alloc]initWithString:@""];
-        for (int i=0; i<[adamBike count];i++)
-        {
-            [bike insertString:([adamBike objectAtIndex:0]) atIndex:0];
-        }
-        [adamRide setBikeType:adamBike];
-        [adamRide calculateRideTime];
-        longLabel.text = [NSString stringWithFormat:@"Adam is riding a %@ .", bike];
-        longCalc.text = [NSString stringWithFormat:@"Miles: %i, Time: %i mins, Breaks: %i mins, MinsPerMile: %i", adamRide.numberMiles, adamRide.timeInMinutes, adamRide.breakTime, adamRide.totalMinutesPerMile];
-    }
+    // Long info button
+    longButton = [UIButton buttonWithType: UIButtonTypeInfoLight];
+    longButton.frame = CGRectMake(300.0f, 520.0f, 20.0f, 20.0f);
+    longButton.tag = 2;
+    [longButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:longButton];
 
 
     
@@ -158,6 +116,106 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
+
+- (void)onClick: (UIButton*)button
+{
+    // I like the switch statement here with the case expressions, easier to use.
+    // Could also use if conditionals...
+    
+    
+    switch (button.tag){
+        case 0:
+        {
+            // Creating the short track ride data for Gavin
+            
+            shortTrack *gavinRide = (shortTrack*)[trailFactory createNewTrailRide:GAVIN];
+            [gavinRide setNumberMiles:5];
+            [gavinRide setTimePerMile:6];
+            
+            if (gavinRide !=nil)
+            {
+                
+                NSArray *gavinBike = [[NSArray alloc]initWithObjects:@"20 inch BMX bike", nil];
+                NSMutableString *bike = [[NSMutableString alloc]initWithString:@""];
+                for (int i=0; i<[gavinBike count];i++)
+                {
+                    [bike insertString:([gavinBike objectAtIndex:0]) atIndex:0];
+                }
+                [gavinRide setBikeType:gavinBike];
+                [gavinRide calculateRideTime];
+                shortLabel.text = [NSString stringWithFormat:@"Gavin is riding a %@ .", bike];
+                shortCalc.text = [NSString stringWithFormat:@"Miles: %i, Minutes: %i", gavinRide.numberMiles, gavinRide.timeInMinutes];
+            }
+            
+
+            
+        }
+            
+            break;
+            
+           
+        case 1:
+        {
+            //Creating the medium track data for Shelly
+            
+            mediumTrack *shellyRide = (mediumTrack*)[trailFactory createNewTrailRide:SHELLY];
+            [shellyRide setNumberMiles:15];
+            [shellyRide setTimePerMile:5];
+            [shellyRide setBreakTime:10];
+            
+            if (shellyRide !=nil)
+            {
+                
+                NSArray *shellyBike = [[NSArray alloc]initWithObjects:@"cruiser bike", nil];
+                NSMutableString *bike = [[NSMutableString alloc]initWithString:@""];
+                for (int i=0; i<[shellyBike count];i++)
+                {
+                    [bike insertString:([shellyBike objectAtIndex:0]) atIndex:0];
+                }
+                [shellyRide setBikeType:shellyBike];
+                [shellyRide calculateRideTime];
+                mediumLabel.text = [NSString stringWithFormat:@"Shelly is riding a %@ .", bike];
+                mediumCalc.text = [NSString stringWithFormat:@"Miles: %i, Time: %i mins, Breaks: %i mins", shellyRide.numberMiles, shellyRide.timeInMinutes, shellyRide.breakTime];
+            }
+            
+
+        }
+            
+            break;
+            
+            
+        case 2:
+        {
+            // Creating the long track data for Adam
+            
+            longTrack *adamRide = (longTrack*)[trailFactory createNewTrailRide:ADAM];
+            [adamRide setNumberMiles:30];
+            [adamRide setTimeEachMile:4];
+            [adamRide setBreakTime:15];
+            
+            if (adamRide !=nil)
+            {
+                
+                NSArray *adamBike = [[NSArray alloc]initWithObjects:@"hybrid road bike", nil];
+                NSMutableString *bike = [[NSMutableString alloc]initWithString:@""];
+                for (int i=0; i<[adamBike count];i++)
+                {
+                    [bike insertString:([adamBike objectAtIndex:0]) atIndex:0];
+                }
+                [adamRide setBikeType:adamBike];
+                [adamRide calculateRideTime];
+                longLabel.text = [NSString stringWithFormat:@"Adam is riding a %@ .", bike];
+                longCalc.text = [NSString stringWithFormat:@"Miles: %i, Time: %i mins, Breaks: %i mins, MinsPerMile: %i", adamRide.numberMiles, adamRide.timeInMinutes, adamRide.breakTime, adamRide.totalMinutesPerMile];
+            }
+            
+
+        }
+    }
+    
+    
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {
