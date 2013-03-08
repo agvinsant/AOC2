@@ -10,4 +10,9 @@
 
 @interface longTrack : baseTrail
 
+@property int numberMiles;
+@property int timeEachMile;
+@property int breakTime;
+@property int totalMinutesPerMile;
+
 @end

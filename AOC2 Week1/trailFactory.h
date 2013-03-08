@@ -14,6 +14,6 @@
 
 @interface trailFactory : NSObject
 
-+(baseTrail*)newTrailRide:(int)bikerType;
++(baseTrail*)createNewTrailRide:(int)biker;
 
 @end

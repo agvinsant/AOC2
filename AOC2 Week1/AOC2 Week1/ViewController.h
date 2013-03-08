@@ -11,4 +11,13 @@
 
 @interface ViewController : UIViewController
 
+{
+    UILabel *shortLabel;
+    UILabel *mediumLabel;
+    UILabel *longLabel;
+    UILabel *shortDetails;
+    UILabel *mediumDetails;
+    UILabel *longDetails;
+}
+
 @end

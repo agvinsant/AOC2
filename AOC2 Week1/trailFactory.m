@@ -10,4 +10,19 @@
 
 @implementation trailFactory
 
++(baseTrail *)createNewTrailRide:(int)biker
+{
+  if (biker == GAVIN)
+  {
+      return [[shortTrack alloc]init];
+  }else if (biker == SHELLY)
+  {
+      return [[mediumTrack alloc]init];
+  }else if (biker == ADAM)
+  {
+      return [[longTrack alloc]init];
+  }else
+      return nil;
+};
+
 @end
