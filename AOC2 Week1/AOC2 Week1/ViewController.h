@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "trailFactory.h"
 
 @interface ViewController : UIViewController
 
@@ -18,6 +18,7 @@
     UILabel *shortCalc;
     UILabel *mediumCalc;
     UILabel *longCalc;
+    
 }
 
 @end
