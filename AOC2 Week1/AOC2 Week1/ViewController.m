@@ -16,6 +16,11 @@
 
 - (void)viewDidLoad
 {
+
+    // Setting background color
+    self.view.backgroundColor = [UIColor grayColor];
+    
+    
     // creating labels for the track types
     // Short track label
     shortLabel = [[UILabel alloc]initWithFrame:CGRectMake(50.0f, 50.0f, 200.f, 90.0f)];
@@ -23,7 +28,7 @@
     shortLabel.text = @"Short Ride Track";
     shortLabel.numberOfLines = 3;
     shortLabel.textAlignment = NSTextAlignmentCenter;
-    shortLabel.textColor = [UIColor whiteColor];
+    shortLabel.textColor = [UIColor grayColor];
     
     [self.view addSubview:shortLabel];
     
@@ -33,7 +38,7 @@
     shortCalc.text = @"Short Ride Calculation";
     shortCalc.numberOfLines = 3;
     shortCalc.textAlignment = NSTextAlignmentCenter;
-    shortCalc.textColor = [UIColor whiteColor];
+    shortCalc.textColor = [UIColor grayColor];
     
     [self.view addSubview:shortCalc];
     
@@ -88,7 +93,7 @@
     if (gavinRide !=nil)
     {
         
-        NSArray *gavinBike = [[NSArray alloc]initWithObjects:@"BMX bike", nil];
+        NSArray *gavinBike = [[NSArray alloc]initWithObjects:@"20 inch BMX bike", nil];
         NSMutableString *bike = [[NSMutableString alloc]initWithString:@""];
         for (int i=0; i<[gavinBike count];i++)
         {
@@ -120,7 +125,7 @@
         [shellyRide setBikeType:shellyBike];
         [shellyRide calculateRideTime];
         mediumLabel.text = [NSString stringWithFormat:@"Shelly is riding a %@ .", bike];
-        mediumCalc.text = [NSString stringWithFormat:@"Miles: %i, Minutes: %i, Breaks: %i", shellyRide.numberMiles, shellyRide.timeInMinutes, shellyRide.breakTime];
+        mediumCalc.text = [NSString stringWithFormat:@"Miles: %i, Time: %i mins, Breaks: %i mins", shellyRide.numberMiles, shellyRide.timeInMinutes, shellyRide.breakTime];
     }
     
     
@@ -143,7 +148,7 @@
         [adamRide setBikeType:adamBike];
         [adamRide calculateRideTime];
         longLabel.text = [NSString stringWithFormat:@"Adam is riding a %@ .", bike];
-        longCalc.text = [NSString stringWithFormat:@"Miles: %i, Minutes: %i, Breaks: %i, TimePerMile: %i", adamRide.numberMiles, adamRide.timeInMinutes, adamRide.breakTime, adamRide.totalMinutesPerMile];
+        longCalc.text = [NSString stringWithFormat:@"Miles: %i, Time: %i mins, Breaks: %i mins, MinsPerMile: %i", adamRide.numberMiles, adamRide.timeInMinutes, adamRide.breakTime, adamRide.totalMinutesPerMile];
     }
 
 
