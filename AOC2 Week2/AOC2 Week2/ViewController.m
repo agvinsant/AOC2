@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "infoViewController.h"
 
 @interface ViewController ()
 
@@ -16,6 +17,7 @@
 
 - (void)viewDidLoad
 {
+    self.view.backgroundColor = [UIColor lightGrayColor];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -55,19 +57,51 @@
 
 -(IBAction)colorSelector:(id)sender
 {
-
+    UISegmentedControl *bgColorControl = (UISegmentedControl*)sender;
+    if (bgColorControl != nil)
+    {
+        if (bgColorControl.selectedSegmentIndex == 0)
+        {
+            self.view.backgroundColor = [UIColor redColor];
+        }
+        else if (bgColorControl.selectedSegmentIndex == 1)
+        {
+            self.view.backgroundColor = [UIColor greenColor];
+        }
+        else if (bgColorControl.selectedSegmentIndex == 2)
+        {
+            self.view.backgroundColor = [UIColor blueColor];
+        }
+        else if (bgColorControl.selectedSegmentIndex == 3)
+        {
+            self.view.backgroundColor = [UIColor lightGrayColor];
+        }
+    }
 }
 -(IBAction)step:(id)sender
 {
-
+    
+    
+        UIStepper *stepControl = (UIStepper*)sender;
+        if (stepControl != nil)
+        {
+            int stepValue = stepControl.value;
+            
+            labelText.text = [NSString stringWithFormat:@"%d miles.", stepValue];
+        }
+    
 }
 -(IBAction)onClickCalc:(id)sender
 {
 
 }
--(IBAction)showText:(id)sender
+-(IBAction)showInfoView:(id)sender
 {
-
+    infoViewController *information = [[infoViewController alloc]initWithNibName:@"infoView" bundle:nil];
+    if (information !=nil)
+    {
+        [self presentViewController:information animated:true completion:nil];
+    }
 }
 
 @end
