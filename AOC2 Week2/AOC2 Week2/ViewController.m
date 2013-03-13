@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "infoViewController.h"
+#import "factory.h"
 
 @interface ViewController ()
 
@@ -55,6 +56,15 @@
     }
 }
 
+-(IBAction)showInfoView:(id)sender
+{
+    infoViewController *information = [[infoViewController alloc]initWithNibName:@"infoView" bundle:nil];
+    if (information !=nil)
+    {
+        [self presentViewController:information animated:true completion:nil];
+    }
+}
+
 -(IBAction)colorSelector:(id)sender
 {
     UISegmentedControl *bgColorControl = (UISegmentedControl*)sender;
@@ -91,17 +101,39 @@
         }
     
 }
+
 -(IBAction)onClickCalc:(id)sender
 {
+    int stepNum = step.value;
     
-}
--(IBAction)showInfoView:(id)sender
-{
-    infoViewController *information = [[infoViewController alloc]initWithNibName:@"infoView" bundle:nil];
-    if (information !=nil)
+    
+    
+    if (shortButton.enabled == NO)
     {
-        [self presentViewController:information animated:true completion:nil];
+        shortRoute *gavinRide = (shortRoute*)[factory createNewTrailRide:GAVIN];
+        [gavinRide setNumberMiles:5];
+        [gavinRide setTimePerMile:6];
+        [gavinRide calculateRideTime];
+    }
+    else if (medButton.enabled == NO)
+    {
+        mediumRoute *shellyRide = (mediumRoute*)[factory createNewTrailRide:SHELLY];
+        [shellyRide setNumberMiles:15];
+        [shellyRide setTimePerMile:5];
+        [shellyRide setBreakTime:10];
+        [shellyRide calculateRideTime];
+
+    }
+    else if (longButton.enabled == NO)
+    {
+        longRoute *adamRide = (longRoute*)[factory createNewTrailRide:ADAM];
+        [adamRide setNumberMiles:30];
+        [adamRide setTimeEachMile:4];
+        [adamRide setBreakTime:15];
+        [adamRide calculateRideTime];
     }
 }
+
+
 
 @end
