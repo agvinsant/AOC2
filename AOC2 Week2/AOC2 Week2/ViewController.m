@@ -53,4 +53,21 @@
     }
 }
 
+-(IBAction)colorSelector:(id)sender
+{
+
+}
+-(IBAction)step:(id)sender
+{
+
+}
+-(IBAction)onClickCalc:(id)sender
+{
+
+}
+-(IBAction)showText:(id)sender
+{
+
+}
+
 @end
