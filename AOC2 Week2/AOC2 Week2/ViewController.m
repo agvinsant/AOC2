@@ -56,6 +56,8 @@
     }
 }
 
+
+// showing my info page or second view
 -(IBAction)showInfoView:(id)sender
 {
     infoViewController *information = [[infoViewController alloc]initWithNibName:@"infoView" bundle:nil];
@@ -65,6 +67,8 @@
     }
 }
 
+
+// function to change the background color
 -(IBAction)colorSelector:(id)sender
 {
     UISegmentedControl *bgColorControl = (UISegmentedControl*)sender;
@@ -111,7 +115,7 @@
     int stepNum = step.value;
     
     
-    
+    // shortButton activated
     if (shortButton.enabled == NO)
     {
         shortRoute *gavinRide = (shortRoute*)[factory createNewTrailRide:GAVIN];
@@ -121,6 +125,7 @@
         medButton.enabled = true;
         longButton.enabled = true;
         
+        // tried to access calculate function from objects but wouldn't work so had to improvise with some static data to get calculations to be accurate.
         int rideTime = gavinRide.timePerMile * stepNum + 20;
         int totalMiles = gavinRide.numberMiles + stepNum;
         
@@ -128,25 +133,29 @@
     }
     else if (medButton.enabled == NO)
     {
+        // medButton activated
         mediumRoute *shellyRide = (mediumRoute*)[factory createNewTrailRide:SHELLY];
         [shellyRide setNumberMiles:15];
         [shellyRide setTimePerMile:5];
     
         shortButton.enabled = true;
         longButton.enabled = true;
-    
+        
+        // tried to access calculate function from objects but wouldn't work so had to improvise with some static data to get calculations to be accurate.
         int rideTime = shellyRide.timePerMile * stepNum + 75;
         int totalMiles = shellyRide.numberMiles + stepNum;
         displayText.text = [NSString stringWithFormat:@"Miles: %i. Time: %i minutes.", totalMiles, rideTime];
     }
     else if (longButton.enabled == NO)
     {
+        //longButton activated
         longRoute *adamRide = (longRoute*)[factory createNewTrailRide:ADAM];
         [adamRide setNumberMiles:30];
         [adamRide setTimeEachMile:6];
         shortButton.enabled = true;
         medButton.enabled = true;
         
+        // tried to access calculate function from objects but wouldn't work so had to improvise with some static data to get calculations to be accurate.
         int rideTime = adamRide.timeEachMile * stepNum + 180;
         int totalMiles = adamRide.numberMiles + stepNum;
         displayText.text = [NSString stringWithFormat:@"Miles: %i. Time: %i minutes.", totalMiles, rideTime];
