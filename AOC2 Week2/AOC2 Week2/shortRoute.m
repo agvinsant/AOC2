@@ -27,7 +27,7 @@
 
 -(void)calculateRideTime
 {
-    [self setTimeInMinutes:(timePerMile * numberMiles)];
+    [self setTimeInMin:(timePerMile * numberMiles)];
 }
 
 

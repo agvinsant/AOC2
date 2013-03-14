@@ -12,7 +12,7 @@
 
 // setting properties for number of miles ridden, the amount of time took, and how many minutes per mile.
 @property int numberMiles;
-@property int timeInMinutes;
+@property int timeInMin;
 @property int timePerMile;
 
 @end

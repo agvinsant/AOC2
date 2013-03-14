@@ -99,7 +99,7 @@
         {
             int stepValue = stepControl.value;
             
-            stepText.text = [NSString stringWithFormat:@"%d miles.", stepValue];
+            stepText.text = [NSString stringWithFormat:@"%d miles added.", stepValue];
         }
     
 }
@@ -116,36 +116,40 @@
     {
         shortRoute *gavinRide = (shortRoute*)[factory createNewTrailRide:GAVIN];
         [gavinRide setNumberMiles:5];
-        [gavinRide setTimePerMile:5];
-        [gavinRide calculateRideTime];
+        [gavinRide setTimePerMile:4];
+
         medButton.enabled = true;
         longButton.enabled = true;
         
-        int rideTime = gavinRide.timePerMile * stepNum;
-       
-        displayText.text = [NSString stringWithFormat:@"Miles: %i. Time: %i minutes.", stepNum, rideTime];
+        int rideTime = gavinRide.timePerMile * stepNum + 20;
+        int totalMiles = gavinRide.numberMiles + stepNum;
+        
+        displayText.text = [NSString stringWithFormat:@"Miles: %i. Time: %i minutes.", totalMiles, rideTime];
     }
     else if (medButton.enabled == NO)
     {
         mediumRoute *shellyRide = (mediumRoute*)[factory createNewTrailRide:SHELLY];
         [shellyRide setNumberMiles:15];
         [shellyRide setTimePerMile:5];
-        [shellyRide setBreakTime:10];
-        [shellyRide calculateRideTime];
+    
         shortButton.enabled = true;
         longButton.enabled = true;
     
-
+        int rideTime = shellyRide.timePerMile * stepNum + 75;
+        int totalMiles = shellyRide.numberMiles + stepNum;
+        displayText.text = [NSString stringWithFormat:@"Miles: %i. Time: %i minutes.", totalMiles, rideTime];
     }
     else if (longButton.enabled == NO)
     {
         longRoute *adamRide = (longRoute*)[factory createNewTrailRide:ADAM];
         [adamRide setNumberMiles:30];
-        [adamRide setTimeEachMile:4];
-        [adamRide setBreakTime:15];
-        [adamRide calculateRideTime];
+        [adamRide setTimeEachMile:6];
         shortButton.enabled = true;
         medButton.enabled = true;
+        
+        int rideTime = adamRide.timeEachMile * stepNum + 180;
+        int totalMiles = adamRide.numberMiles + stepNum;
+        displayText.text = [NSString stringWithFormat:@"Miles: %i. Time: %i minutes.", totalMiles, rideTime];
     }
 }
 
