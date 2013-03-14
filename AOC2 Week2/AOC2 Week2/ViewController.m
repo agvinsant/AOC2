@@ -99,7 +99,7 @@
         {
             int stepValue = stepControl.value;
             
-            stepText.text = [NSString stringWithFormat:@"Add %d miles.", stepValue];
+            stepText.text = [NSString stringWithFormat:@"%d miles.", stepValue];
         }
     
 }
@@ -116,12 +116,14 @@
     {
         shortRoute *gavinRide = (shortRoute*)[factory createNewTrailRide:GAVIN];
         [gavinRide setNumberMiles:5];
-        [gavinRide setTimePerMile:6];
+        [gavinRide setTimePerMile:5];
         [gavinRide calculateRideTime];
         medButton.enabled = true;
         longButton.enabled = true;
         
-        int totalMiles = gavinRide.numberMiles * stepNum;
+        int rideTime = gavinRide.timePerMile * stepNum;
+       
+        displayText.text = [NSString stringWithFormat:@"Miles: %i. Time: %i minutes.", stepNum, rideTime];
     }
     else if (medButton.enabled == NO)
     {
