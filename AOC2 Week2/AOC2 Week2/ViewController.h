@@ -17,7 +17,7 @@
     IBOutlet UIButton *longButton;
     IBOutlet UIButton *calcButton;
     // Label for background color text
-    IBOutlet UILabel *labelText;
+    IBOutlet UILabel *stepText;
     // Stepper
     IBOutlet UIStepper *step;
     // Text field

@@ -88,6 +88,8 @@
         }
     }
 }
+
+// Step controller
 -(IBAction)step:(id)sender
 {
     
@@ -97,11 +99,13 @@
         {
             int stepValue = stepControl.value;
             
-            labelText.text = [NSString stringWithFormat:@"%d miles.", stepValue];
+            stepText.text = [NSString stringWithFormat:@"Add %d miles.", stepValue];
         }
     
 }
 
+
+//Calculation action
 -(IBAction)onClickCalc:(id)sender
 {
     int stepNum = step.value;
@@ -114,6 +118,10 @@
         [gavinRide setNumberMiles:5];
         [gavinRide setTimePerMile:6];
         [gavinRide calculateRideTime];
+        medButton.enabled = true;
+        longButton.enabled = true;
+        
+        int totalMiles = gavinRide.numberMiles * stepNum;
     }
     else if (medButton.enabled == NO)
     {
@@ -122,6 +130,9 @@
         [shellyRide setTimePerMile:5];
         [shellyRide setBreakTime:10];
         [shellyRide calculateRideTime];
+        shortButton.enabled = true;
+        longButton.enabled = true;
+    
 
     }
     else if (longButton.enabled == NO)
@@ -131,6 +142,8 @@
         [adamRide setTimeEachMile:4];
         [adamRide setBreakTime:15];
         [adamRide calculateRideTime];
+        shortButton.enabled = true;
+        medButton.enabled = true;
     }
 }
 
