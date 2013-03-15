@@ -125,8 +125,8 @@
         medButton.enabled = true;
         longButton.enabled = true;
         
-        // tried to access calculate function from objects but wouldn't work so had to improvise with some static data to get calculations to be accurate.
-        int rideTime = gavinRide.timePerMile * stepNum + 20;
+        int totalTime = gavinRide.timePerMile * gavinRide.numberMiles;
+        int rideTime = gavinRide.timePerMile * stepNum + totalTime;
         int totalMiles = gavinRide.numberMiles + stepNum;
         
         displayText.text = [NSString stringWithFormat:@"Miles: %i. Time: %i minutes.", totalMiles, rideTime];
@@ -141,8 +141,9 @@
         shortButton.enabled = true;
         longButton.enabled = true;
         
-        // tried to access calculate function from objects but wouldn't work so had to improvise with some static data to get calculations to be accurate.
-        int rideTime = shellyRide.timePerMile * stepNum + 75;
+        
+        int totalTime = shellyRide.timePerMile * shellyRide.numberMiles;
+        int rideTime = shellyRide.timePerMile * stepNum + totalTime;
         int totalMiles = shellyRide.numberMiles + stepNum;
         displayText.text = [NSString stringWithFormat:@"Miles: %i. Time: %i minutes.", totalMiles, rideTime];
     }
@@ -155,8 +156,8 @@
         shortButton.enabled = true;
         medButton.enabled = true;
         
-        // tried to access calculate function from objects but wouldn't work so had to improvise with some static data to get calculations to be accurate.
-        int rideTime = adamRide.timeEachMile * stepNum + 180;
+                int totalTime = adamRide.timeEachMile * adamRide.numberMiles;
+        int rideTime = adamRide.timeEachMile * stepNum + totalTime;
         int totalMiles = adamRide.numberMiles + stepNum;
         displayText.text = [NSString stringWithFormat:@"Miles: %i. Time: %i minutes.", totalMiles, rideTime];
     }
