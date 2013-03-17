@@ -10,4 +10,12 @@
 
 @interface addEvent : UIViewController
 
+{
+    IBOutlet UIButton *save;
+    IBOutlet UIButton *close;
+    IBOutlet UITextField *eventName;
+}
+
+-(IBAction)onClick:(id)sender;
+
 @end

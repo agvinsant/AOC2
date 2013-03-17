@@ -20,6 +20,17 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+// Showing the Add Event View
+-(IBAction)addEventView:(id)sender
+{
+    addEvent *eventInfo = [[addEvent alloc]initWithNibName:@"addEvent" bundle:nil];
+    if (eventInfo !=nil)
+    {
+        [self presentViewController:eventInfo animated:true completion:nil];
+    }
+}
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
