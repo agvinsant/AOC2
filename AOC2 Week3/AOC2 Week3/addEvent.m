@@ -8,6 +8,7 @@
 
 #import "addEvent.h"
 
+
 @interface addEvent ()
 
 @end
@@ -31,6 +32,10 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+
+
+
+
 -(void)viewWillAppear:(BOOL)animated
 {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector (showKeyboard:) name:UIKeyboardWillShowNotification object:nil];
@@ -50,10 +55,34 @@
     
 }
 
--(IBAction)onClick:(id)sender
+-(IBAction)onClose:(id)sender
 {
-    []
+    [eventName resignFirstResponder];
 }
+
+-(IBAction)onChange:(id)sender
+{
+    picker = (UIDatePicker*)sender;
+    if(picker != nil)
+    {
+        NSDate *date = picker.date;
+        
+        NSLog(@"date picked: %@", [date description]);
+    }
+}
+
+
+
+-(IBAction)onSave:(id)sender
+{
+    
+    NSString *eventString = [NSString stringWithFormat:@"New Event: %@", eventName.text];
+    
+    //Testing function in log.
+    NSLog(@"Creating %@", eventString);
+
+}
+
 
 - (void)didReceiveMemoryWarning
 {

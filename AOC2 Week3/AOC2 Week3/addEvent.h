@@ -8,14 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface addEvent : UIViewController
 
+@interface addEvent : UIViewController 
 {
-    IBOutlet UIButton *save;
-    IBOutlet UIButton *close;
     IBOutlet UITextField *eventName;
+    IBOutlet UIDatePicker *picker;
 }
 
--(IBAction)onClick:(id)sender;
+-(IBAction)onClose:(id)sender;
+-(IBAction)onSave:(id)sender;
+-(IBAction)onChange:(id)sender;
+
 
 @end
