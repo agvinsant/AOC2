@@ -8,16 +8,26 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol addEventDelegate <NSObject>
+@required
+-(void)didSave:(NSString*)nameString;
 
-@interface addEvent : UIViewController 
+@end
+
+
+@interface addEvent : UIViewController <UITextFieldDelegate>
 {
+    id<addEventDelegate>delegate;
+    
+    
     IBOutlet UITextField *eventName;
     IBOutlet UIDatePicker *picker;
+    NSString *dateInput;
 }
 
 -(IBAction)onClose:(id)sender;
 -(IBAction)onSave:(id)sender;
--(IBAction)onChange:(id)sender;
 
 
+@property (strong) id<addEventDelegate>delegate;
 @end

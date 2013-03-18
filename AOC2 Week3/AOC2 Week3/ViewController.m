@@ -14,6 +14,7 @@
 
 @implementation ViewController
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -26,11 +27,15 @@
     addEvent *eventInfo = [[addEvent alloc]initWithNibName:@"addEvent" bundle:nil];
     if (eventInfo !=nil)
     {
+        addEvent.delegate = self;
         [self presentViewController:eventInfo animated:true completion:nil];
     }
 }
 
-
+-(void)didSave:(NSString *)nameString
+{
+    eventList.text = nameString;
+}
 
 
 

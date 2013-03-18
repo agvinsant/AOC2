@@ -15,6 +15,8 @@
 
 @implementation addEvent
 
+@synthesize delegate;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -45,6 +47,7 @@
     [super viewWillAppear:animated];
 }
 
+
 -(void)showKeyboard: (NSNotification *)notification
 {
     
@@ -52,7 +55,7 @@
 
 -(void)hideKeyboard: (NSNotification *)notification
 {
-    
+  
 }
 
 -(IBAction)onClose:(id)sender
@@ -60,26 +63,23 @@
     [eventName resignFirstResponder];
 }
 
--(IBAction)onChange:(id)sender
-{
-    picker = (UIDatePicker*)sender;
-    if(picker != nil)
-    {
-        NSDate *date = picker.date;
-        
-        NSLog(@"date picked: %@", [date description]);
-    }
-}
 
 
 
 -(IBAction)onSave:(id)sender
 {
+    picker = (UIDatePicker*)sender;
+    NSDate *date = picker.date;
+    dateInput = [NSString stringWithFormat: @"%@", [date description] ];
     
-    NSString *eventString = [NSString stringWithFormat:@"New Event: %@", eventName.text];
+    NSString *eventString = [NSString stringWithFormat:@"/n/nNew Event: %@/nDate and Time: %@", eventName.text, dateInput];
+    
     
     //Testing function in log.
-    NSLog(@"Creating %@", eventString);
+    //NSLog(@"Creating %@", eventString);
+
+
+    [delegate didSave:eventString];
 
 }
 

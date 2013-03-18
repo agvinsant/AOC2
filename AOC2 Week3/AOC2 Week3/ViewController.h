@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "addEvent.h"
-@interface ViewController : UIViewController
+
+@interface ViewController : UIViewController <addEventDelegate>
 
 {
     IBOutlet UIButton *addEvent;
