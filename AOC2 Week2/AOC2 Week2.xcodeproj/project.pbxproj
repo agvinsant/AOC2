@@ -33,7 +33,7 @@
 		35266E8F16F00D730099DAE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35266E6A16F00D730099DAE6 /* Foundation.framework */; };
 		35266E9716F00D730099DAE6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 35266E9516F00D730099DAE6 /* InfoPlist.strings */; };
 		35266E9A16F00D730099DAE6 /* AOC2_Week2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35266E9916F00D730099DAE6 /* AOC2_Week2Tests.m */; };
-		35FE7C2416F2A8DD00B4A12F /* adam.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 35FE7C2316F2A8DD00B4A12F /* adam.jpg */; };
+		35DB6E6216F7C8BC0094C92C /* adam.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 35DB6E6116F7C8BC0094C92C /* adam.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +85,7 @@
 		35266E9616F00D730099DAE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		35266E9816F00D730099DAE6 /* AOC2_Week2Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AOC2_Week2Tests.h; sourceTree = "<group>"; };
 		35266E9916F00D730099DAE6 /* AOC2_Week2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AOC2_Week2Tests.m; sourceTree = "<group>"; };
-		35FE7C2316F2A8DD00B4A12F /* adam.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = adam.jpg; path = "../../../../Desktop/DESKTOP FILES/WEB STUFF/adam.jpg"; sourceTree = "<group>"; };
+		35DB6E6116F7C8BC0094C92C /* adam.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = adam.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,10 +145,10 @@
 		35266E6E16F00D730099DAE6 /* AOC2 Week2 */ = {
 			isa = PBXGroup;
 			children = (
+				35DB6E6116F7C8BC0094C92C /* adam.jpg */,
 				351DC2FC16F2C59000747CDA /* button.png */,
 				351DC2FD16F2C59000747CDA /* calcbutton.png */,
 				351DC2FE16F2C59000747CDA /* header.png */,
-				35FE7C2316F2A8DD00B4A12F /* adam.jpg */,
 				35266E7716F00D730099DAE6 /* AppDelegate.h */,
 				35266E7816F00D730099DAE6 /* AppDelegate.m */,
 				35266E8016F00D730099DAE6 /* ViewController.h */,
@@ -282,10 +282,10 @@
 				35266E7F16F00D730099DAE6 /* Default-568h@2x.png in Resources */,
 				35266E8516F00D730099DAE6 /* ViewController.xib in Resources */,
 				35111CC816F1087A0037D817 /* infoView.xib in Resources */,
-				35FE7C2416F2A8DD00B4A12F /* adam.jpg in Resources */,
 				351DC2FF16F2C59000747CDA /* button.png in Resources */,
 				351DC30016F2C59000747CDA /* calcbutton.png in Resources */,
 				351DC30116F2C59000747CDA /* header.png in Resources */,
+				35DB6E6216F7C8BC0094C92C /* adam.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
