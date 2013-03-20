@@ -25,6 +25,10 @@
 		350F33F116F5F73100359945 /* AOC2_Week3Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 350F33F016F5F73100359945 /* AOC2_Week3Tests.m */; };
 		350F33FD16F5F79300359945 /* addEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 350F33FB16F5F79300359945 /* addEvent.m */; };
 		350F33FE16F5F79300359945 /* addEvent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 350F33FC16F5F79300359945 /* addEvent.xib */; };
+		354BCCE116F96B9000FBC139 /* closeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 354BCCDF16F96B9000FBC139 /* closeButton.png */; };
+		354BCCE216F96B9000FBC139 /* saveButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 354BCCE016F96B9000FBC139 /* saveButton.png */; };
+		354BCCE416F96C8A00FBC139 /* addEventButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 354BCCE316F96C8A00FBC139 /* addEventButton.png */; };
+		354BCCE616F96D5100FBC139 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 354BCCE516F96D5100FBC139 /* header.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		350F33FA16F5F79300359945 /* addEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addEvent.h; sourceTree = "<group>"; };
 		350F33FB16F5F79300359945 /* addEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addEvent.m; sourceTree = "<group>"; };
 		350F33FC16F5F79300359945 /* addEvent.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = addEvent.xib; sourceTree = "<group>"; };
+		354BCCDF16F96B9000FBC139 /* closeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = closeButton.png; sourceTree = "<group>"; };
+		354BCCE016F96B9000FBC139 /* saveButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saveButton.png; sourceTree = "<group>"; };
+		354BCCE316F96C8A00FBC139 /* addEventButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addEventButton.png; sourceTree = "<group>"; };
+		354BCCE516F96D5100FBC139 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +130,10 @@
 		350F33C516F5F73100359945 /* AOC2 Week3 */ = {
 			isa = PBXGroup;
 			children = (
+				354BCCE516F96D5100FBC139 /* header.png */,
+				354BCCE316F96C8A00FBC139 /* addEventButton.png */,
+				354BCCDF16F96B9000FBC139 /* closeButton.png */,
+				354BCCE016F96B9000FBC139 /* saveButton.png */,
 				350F33CE16F5F73100359945 /* AppDelegate.h */,
 				350F33CF16F5F73100359945 /* AppDelegate.m */,
 				350F33D716F5F73100359945 /* ViewController.h */,
@@ -245,6 +257,10 @@
 				350F33D616F5F73100359945 /* Default-568h@2x.png in Resources */,
 				350F33DC16F5F73100359945 /* ViewController.xib in Resources */,
 				350F33FE16F5F79300359945 /* addEvent.xib in Resources */,
+				354BCCE116F96B9000FBC139 /* closeButton.png in Resources */,
+				354BCCE216F96B9000FBC139 /* saveButton.png in Resources */,
+				354BCCE416F96C8A00FBC139 /* addEventButton.png in Resources */,
+				354BCCE616F96D5100FBC139 /* header.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +479,7 @@
 				350F33F616F5F73100359945 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		350F33F716F5F73100359945 /* Build configuration list for PBXNativeTarget "AOC2 Week3Tests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +488,7 @@
 				350F33F916F5F73100359945 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -25,8 +25,6 @@
     
     IBOutlet UITextField *eventName;
     IBOutlet UIDatePicker *picker;
-    NSString *dateInput;
-    NSString *newEvent;
     NSDate *eventDate;
 }
 
