@@ -33,7 +33,21 @@
 
 -(void)didSave:(NSString *)nameString
 {
-    eventList.text = nameString;
+    NSString *eventString = nameString;
+    
+    if([eventList.text isEqualToString:@""])
+    {
+        eventList.text = nameString;
+    }
+    else
+    {
+        eventList.text = [eventList.text stringByAppendingString:eventString];
+    }
+}
+
+-(IBAction)clearList:(id)sender
+{
+    eventList.text = @"";
 }
 
 // Button call function to open the addEvent view

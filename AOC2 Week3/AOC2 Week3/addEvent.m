@@ -69,11 +69,11 @@
     //NSLog(@"formattedDateString: %@", formattedDateString);
     
     // Saving to ViewController textView
-    [delegate didSave:[NSString stringWithFormat:@"New Event: %@\nDate and Time: %@\n\n",eventName.text, formattedDateString]];
+    [delegate didSave:[NSMutableString stringWithFormat:@"New Event: %@\nDate and Time: %@\n\n",eventName.text, formattedDateString]];
     
     // telling you that the event is saved in an alert
     
-    UIAlertView *successAlert = [[UIAlertView alloc]initWithTitle:@"Saved" message:@"You have successfully saved the event" delegate:nil cancelButtonTitle:@"Close" otherButtonTitles:nil];
+    UIAlertView *successAlert = [[UIAlertView alloc]initWithTitle:@"Saved" message:@"New event added." delegate:nil cancelButtonTitle:@"Close" otherButtonTitles:nil];
     [successAlert show];
     
     // sending the addEvent View away

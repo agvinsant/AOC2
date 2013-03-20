@@ -12,6 +12,7 @@
 @interface ViewController : UIViewController <addEventDelegate>
 
 {
+    IBOutlet UIButton *clear;
     IBOutlet UIButton *addEvent;
     IBOutlet UITextView *eventList;
     id<addEventDelegate> delegate;
@@ -22,5 +23,5 @@
 
 // Button function to open addEvent view
 -(IBAction)addEventView:(id)sender;
-
+-(IBAction)clearList:(id)sender;
 @end
