@@ -14,9 +14,13 @@
 {
     IBOutlet UIButton *addEvent;
     IBOutlet UITextView *eventList;
-    
+    id<addEventDelegate> delegate;
 }
 
+// setting the property for the delegate
+@property(strong)id<addEventDelegate> delegate;
 
+// Button function to open addEvent view
 -(IBAction)addEventView:(id)sender;
+
 @end

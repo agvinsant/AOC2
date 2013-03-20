@@ -13,7 +13,7 @@
 @end
 
 @implementation ViewController
-
+@synthesize delegate;
 
 - (void)viewDidLoad
 {
@@ -21,28 +21,35 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-// Showing the Add Event View
--(IBAction)addEventView:(id)sender
+- (void)didReceiveMemoryWarning
 {
-    addEvent *eventInfo = [[addEvent alloc]initWithNibName:@"addEvent" bundle:nil];
-    if (eventInfo !=nil)
-    {
-        addEvent.delegate = self;
-        [self presentViewController:eventInfo animated:true completion:nil];
-    }
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
+
+
+
+// sending to the textView from the addEvent view
 
 -(void)didSave:(NSString *)nameString
 {
     eventList.text = nameString;
 }
 
-
-
-- (void)didReceiveMemoryWarning
+// Button call function to open the addEvent view
+-(IBAction)addEventView:(id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    addEvent *eventInfo = [[addEvent alloc]initWithNibName:@"addEvent" bundle:nil];
+    
+    if (eventInfo !=nil)
+    {
+        // calling the delegate
+        eventInfo.delegate = self;
+        
+        [self presentViewController:eventInfo animated:true completion:nil];
+    }
 }
+
+
 
 @end

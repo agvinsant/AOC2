@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+//Created a new protocal for the delegate between the addEvent and ViewController
 @protocol addEventDelegate <NSObject>
+
 @required
 -(void)didSave:(NSString*)nameString;
 
@@ -17,17 +19,23 @@
 
 @interface addEvent : UIViewController <UITextFieldDelegate>
 {
+    // creating the delegate tag
     id<addEventDelegate>delegate;
     
     
     IBOutlet UITextField *eventName;
     IBOutlet UIDatePicker *picker;
     NSString *dateInput;
+    NSString *newEvent;
+    NSDate *eventDate;
 }
 
+// Close Keyboard button function
 -(IBAction)onClose:(id)sender;
+
+// Save Event button function
 -(IBAction)onSave:(id)sender;
 
-
+// creating a property for the delegate
 @property (strong) id<addEventDelegate>delegate;
 @end

@@ -27,36 +27,23 @@
 }
 
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Setting the minimum date for the picker
+    picker.minimumDate = [NSDate date];
+    
+    
     // Do any additional setup after loading the view from its nib.
 }
 
-
-
-
-
 -(void)viewWillAppear:(BOOL)animated
 {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector (showKeyboard:) name:UIKeyboardWillShowNotification object:nil];
-     
-     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector (hideKeyboard:) name:UIKeyboardWillHideNotification object:nil];
-      
-    [super viewWillAppear:animated];
+        [super viewWillAppear:animated];
 }
 
-
--(void)showKeyboard: (NSNotification *)notification
-{
-    
-}
-
--(void)hideKeyboard: (NSNotification *)notification
-{
-  
-}
+// When the Close Keyboard button is pressed
 
 -(IBAction)onClose:(id)sender
 {
@@ -64,23 +51,33 @@
 }
 
 
-
+// When save button is clicked it populates the ViewController textView with the new event name and date w/time. 
 
 -(IBAction)onSave:(id)sender
 {
+    // Setting my date strings
+    eventDate = picker.date;
     picker = (UIDatePicker*)sender;
-    NSDate *date = picker.date;
-    dateInput = [NSString stringWithFormat: @"%@", [date description] ];
     
-    NSString *eventString = [NSString stringWithFormat:@"/n/nNew Event: %@/nDate and Time: %@", eventName.text, dateInput];
+    // Formatting date... Thanks to the Mac Developer Library...
+    NSDateFormatter *formatDate = [[NSDateFormatter alloc] init];
+    [formatDate setDateStyle:NSDateFormatterMediumStyle];
+    [formatDate setTimeStyle:NSDateFormatterShortStyle];
     
+    // Setting the Date string
+    NSString *formattedDateString = [formatDate stringFromDate:eventDate];
+    //NSLog(@"formattedDateString: %@", formattedDateString);
     
-    //Testing function in log.
-    //NSLog(@"Creating %@", eventString);
-
-
-    [delegate didSave:eventString];
-
+    // Saving to ViewController textView
+    [delegate didSave:[NSString stringWithFormat:@"New Event: %@\nDate and Time: %@\n\n",eventName.text, formattedDateString]];
+    
+    // telling you that the event is saved in an alert
+    
+    UIAlertView *successAlert = [[UIAlertView alloc]initWithTitle:@"Saved" message:@"You have successfully saved the event" delegate:nil cancelButtonTitle:@"Close" otherButtonTitles:nil];
+    [successAlert show];
+    
+    // sending the addEvent View away
+    [self dismissViewControllerAnimated:true completion:nil];
 }
 
 
