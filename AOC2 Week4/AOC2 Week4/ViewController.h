@@ -7,7 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "addEvent.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <addEventDelegate>
 
+{
+    IBOutlet UILabel *swiperight;
+    IBOutlet UIButton *clear;
+    IBOutlet UITextView *eventList;
+    UISwipeGestureRecognizer *rightSwipe;
+    id<addEventDelegate> delegate;
+}
+
+// setting the property for the delegate
+@property(strong)id<addEventDelegate> delegate;
+
+// swipe function to open addEvent view
+
+-(void)onSwipeRight:(UISwipeGestureRecognizer*)seeSwipeRight;
+
+-(IBAction)clearList:(id)sender;
 @end
+

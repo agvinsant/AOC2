@@ -23,6 +23,12 @@
 		352EA81A16F9FF2A00C775FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 352EA7F516F9FF2A00C775FA /* Foundation.framework */; };
 		352EA82216F9FF2A00C775FA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 352EA82016F9FF2A00C775FA /* InfoPlist.strings */; };
 		352EA82516F9FF2A00C775FA /* AOC2_Week4Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 352EA82416F9FF2A00C775FA /* AOC2_Week4Tests.m */; };
+		35F4163A16FB4F7A006D7D76 /* addEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F4163816FB4F7A006D7D76 /* addEvent.m */; };
+		35F4163B16FB4F7A006D7D76 /* addEvent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35F4163916FB4F7A006D7D76 /* addEvent.xib */; };
+		35F4163D16FB4FDF006D7D76 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 35F4163C16FB4FDF006D7D76 /* header.png */; };
+		35F4163F16FB5433006D7D76 /* swiperight.png in Resources */ = {isa = PBXBuildFile; fileRef = 35F4163E16FB5433006D7D76 /* swiperight.png */; };
+		35F4164116FB570E006D7D76 /* swipeleft.png in Resources */ = {isa = PBXBuildFile; fileRef = 35F4164016FB570E006D7D76 /* swipeleft.png */; };
+		35F4164316FB57DF006D7D76 /* closeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 35F4164216FB57DF006D7D76 /* closeButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +64,13 @@
 		352EA82116F9FF2A00C775FA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		352EA82316F9FF2A00C775FA /* AOC2_Week4Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AOC2_Week4Tests.h; sourceTree = "<group>"; };
 		352EA82416F9FF2A00C775FA /* AOC2_Week4Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AOC2_Week4Tests.m; sourceTree = "<group>"; };
+		35F4163716FB4F7A006D7D76 /* addEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addEvent.h; sourceTree = "<group>"; };
+		35F4163816FB4F7A006D7D76 /* addEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addEvent.m; sourceTree = "<group>"; };
+		35F4163916FB4F7A006D7D76 /* addEvent.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = addEvent.xib; sourceTree = "<group>"; };
+		35F4163C16FB4FDF006D7D76 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
+		35F4163E16FB5433006D7D76 /* swiperight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swiperight.png; sourceTree = "<group>"; };
+		35F4164016FB570E006D7D76 /* swipeleft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipeleft.png; sourceTree = "<group>"; };
+		35F4164216FB57DF006D7D76 /* closeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = closeButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,12 +130,19 @@
 		352EA7F916F9FF2A00C775FA /* AOC2 Week4 */ = {
 			isa = PBXGroup;
 			children = (
+				35F4164216FB57DF006D7D76 /* closeButton.png */,
+				35F4164016FB570E006D7D76 /* swipeleft.png */,
+				35F4163E16FB5433006D7D76 /* swiperight.png */,
+				35F4163C16FB4FDF006D7D76 /* header.png */,
 				352EA80216F9FF2A00C775FA /* AppDelegate.h */,
 				352EA80316F9FF2A00C775FA /* AppDelegate.m */,
 				352EA80B16F9FF2A00C775FA /* ViewController.h */,
 				352EA80C16F9FF2A00C775FA /* ViewController.m */,
 				352EA80E16F9FF2A00C775FA /* ViewController.xib */,
 				352EA7FA16F9FF2A00C775FA /* Supporting Files */,
+				35F4163716FB4F7A006D7D76 /* addEvent.h */,
+				35F4163816FB4F7A006D7D76 /* addEvent.m */,
+				35F4163916FB4F7A006D7D76 /* addEvent.xib */,
 			);
 			path = "AOC2 Week4";
 			sourceTree = "<group>";
@@ -236,6 +256,11 @@
 				352EA80816F9FF2A00C775FA /* Default@2x.png in Resources */,
 				352EA80A16F9FF2A00C775FA /* Default-568h@2x.png in Resources */,
 				352EA81016F9FF2A00C775FA /* ViewController.xib in Resources */,
+				35F4163B16FB4F7A006D7D76 /* addEvent.xib in Resources */,
+				35F4163D16FB4FDF006D7D76 /* header.png in Resources */,
+				35F4163F16FB5433006D7D76 /* swiperight.png in Resources */,
+				35F4164116FB570E006D7D76 /* swipeleft.png in Resources */,
+				35F4164316FB57DF006D7D76 /* closeButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +298,7 @@
 				352EA80016F9FF2A00C775FA /* main.m in Sources */,
 				352EA80416F9FF2A00C775FA /* AppDelegate.m in Sources */,
 				352EA80D16F9FF2A00C775FA /* ViewController.m in Sources */,
+				35F4163A16FB4F7A006D7D76 /* addEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +479,7 @@
 				352EA82A16F9FF2A00C775FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		352EA82B16F9FF2A00C775FA /* Build configuration list for PBXNativeTarget "AOC2 Week4Tests" */ = {
 			isa = XCConfigurationList;
@@ -461,6 +488,7 @@
 				352EA82D16F9FF2A00C775FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
