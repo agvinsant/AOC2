@@ -55,6 +55,12 @@
 {
     addEvent *eventInfo = [[addEvent alloc]initWithNibName:@"addEvent" bundle:nil];
     
+    // Clearing out the textview
+    
+    if ([eventList.text isEqualToString:@"Dates shown here"])
+    {
+        eventList.text = @"";
+    }
     if (eventInfo !=nil)
     {
         // calling the delegate
