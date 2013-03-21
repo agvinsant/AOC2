@@ -55,6 +55,12 @@
 
 -(IBAction)onSave:(id)sender
 {
+    if ([eventName.text isEqualToString:@""])
+    {
+        UIAlertView *error = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Please enter event name" delegate:nil cancelButtonTitle:@"Fix it!" otherButtonTitles:nil];
+        [error show];
+    }else{
+    
     // Setting my date strings
     eventDate = picker.date;
     picker = (UIDatePicker*)sender;
@@ -78,6 +84,7 @@
     
     // sending the addEvent View away
     [self dismissViewControllerAnimated:true completion:nil];
+    }
 }
 
 

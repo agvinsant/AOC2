@@ -22,7 +22,7 @@
     // creating the delegate tag
     id<addEventDelegate>delegate;
     
-    
+
     IBOutlet UITextField *eventName;
     IBOutlet UIDatePicker *picker;
     NSDate *eventDate;
@@ -33,6 +33,8 @@
 
 // Save Event button function
 -(IBAction)onSave:(id)sender;
+
+
 
 // creating a property for the delegate
 @property (strong) id<addEventDelegate>delegate;
