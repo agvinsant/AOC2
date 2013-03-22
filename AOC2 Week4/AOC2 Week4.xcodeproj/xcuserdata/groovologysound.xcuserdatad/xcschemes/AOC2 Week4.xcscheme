@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "352EA7EF16F9FF2A00C775FA"
+               BlueprintIdentifier = "3500CDE516FCE3E6003822F0"
                BuildableName = "AOC2 Week4.app"
                BlueprintName = "AOC2 Week4"
                ReferencedContainer = "container:AOC2 Week4.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "352EA81516F9FF2A00C775FA"
+               BlueprintIdentifier = "3500CE0B16FCE3E7003822F0"
                BuildableName = "AOC2 Week4Tests.octest"
                BlueprintName = "AOC2 Week4Tests"
                ReferencedContainer = "container:AOC2 Week4.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "352EA7EF16F9FF2A00C775FA"
+            BlueprintIdentifier = "3500CDE516FCE3E6003822F0"
             BuildableName = "AOC2 Week4.app"
             BlueprintName = "AOC2 Week4"
             ReferencedContainer = "container:AOC2 Week4.xcodeproj">
@@ -61,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "352EA7EF16F9FF2A00C775FA"
+            BlueprintIdentifier = "3500CDE516FCE3E6003822F0"
             BuildableName = "AOC2 Week4.app"
             BlueprintName = "AOC2 Week4"
             ReferencedContainer = "container:AOC2 Week4.xcodeproj">
@@ -79,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "352EA7EF16F9FF2A00C775FA"
+            BlueprintIdentifier = "3500CDE516FCE3E6003822F0"
             BuildableName = "AOC2 Week4.app"
             BlueprintName = "AOC2 Week4"
             ReferencedContainer = "container:AOC2 Week4.xcodeproj">
