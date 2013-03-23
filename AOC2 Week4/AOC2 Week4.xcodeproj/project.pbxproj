@@ -27,6 +27,7 @@
 		3500CE2916FCE5C0003822F0 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 3500CE2516FCE5C0003822F0 /* header.png */; };
 		3500CE2A16FCE5C0003822F0 /* swipeleft.png in Resources */ = {isa = PBXBuildFile; fileRef = 3500CE2616FCE5C0003822F0 /* swipeleft.png */; };
 		3500CE2B16FCE5C0003822F0 /* swiperight.png in Resources */ = {isa = PBXBuildFile; fileRef = 3500CE2716FCE5C0003822F0 /* swiperight.png */; };
+		35EA139716FD366300ECE06A /* saveClearButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 35EA139616FD366300ECE06A /* saveClearButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		3500CE2516FCE5C0003822F0 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
 		3500CE2616FCE5C0003822F0 /* swipeleft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipeleft.png; sourceTree = "<group>"; };
 		3500CE2716FCE5C0003822F0 /* swiperight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swiperight.png; sourceTree = "<group>"; };
+		35EA139616FD366300ECE06A /* saveClearButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saveClearButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		3500CDEF16FCE3E6003822F0 /* AOC2 Week4 */ = {
 			isa = PBXGroup;
 			children = (
+				35EA139616FD366300ECE06A /* saveClearButton.png */,
 				3500CE2416FCE5C0003822F0 /* closeButton.png */,
 				3500CE2516FCE5C0003822F0 /* header.png */,
 				3500CE2616FCE5C0003822F0 /* swipeleft.png */,
@@ -252,6 +255,7 @@
 				3500CE2916FCE5C0003822F0 /* header.png in Resources */,
 				3500CE2A16FCE5C0003822F0 /* swipeleft.png in Resources */,
 				3500CE2B16FCE5C0003822F0 /* swiperight.png in Resources */,
+				35EA139716FD366300ECE06A /* saveClearButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +473,7 @@
 				3500CE2016FCE3E7003822F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3500CE2116FCE3E7003822F0 /* Build configuration list for PBXNativeTarget "AOC2 Week4Tests" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +482,7 @@
 				3500CE2316FCE3E7003822F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
