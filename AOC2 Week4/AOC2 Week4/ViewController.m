@@ -187,9 +187,14 @@
     }
     
     // showing alert for saving the data
-    UIAlertView *saveAlert = [[UIAlertView alloc]initWithTitle:@"Saved!" message:@"Events saved." delegate:nil cancelButtonTitle:@"Close" otherButtonTitles:nil];
-    [saveAlert show];
-
+    if([eventList.text isEqual: @"Dates shown here"])
+    {
+        UIAlertView *emptyAlert = [[UIAlertView alloc]initWithTitle:@"" message:@"There are no events to save, please add an event." delegate:nil cancelButtonTitle:@"Close" otherButtonTitles:nil];
+        [emptyAlert show];
+    }else{
+        UIAlertView *saveAlert = [[UIAlertView alloc]initWithTitle:@"Saved!" message:@"Events saved." delegate:nil cancelButtonTitle:@"Close" otherButtonTitles:nil];
+        [saveAlert show];
+    }
 }
 
 - (void)didReceiveMemoryWarning
