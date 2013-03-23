@@ -18,6 +18,15 @@
 
 - (void)viewDidLoad
 {
+    //Loads saved event
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if (defaults != nil)
+    {
+        NSString *eventText = [defaults objectForKey:@"Saved"];
+        
+        eventList.text = eventText;
+    }
+
     // Setting the minimum date for the picker
     picker.minimumDate = [NSDate date];
     
@@ -51,12 +60,9 @@
 // happens when keyboard appears
 -(void)keyboardWillShow:(NSNotification*)notification
 {
-    
     close.hidden = false;
     keyboardLabel.hidden = false;
     dateLabel.hidden = true;
-    
-
 }
 
 //happens when keyboard is hidden
@@ -83,12 +89,10 @@
 // Swipe functions for left and right swipe
 -(void)onSwipe:(UISwipeGestureRecognizer*)recognizer
 {
-   
     //Swipe right functions
     if(recognizer.direction == UISwipeGestureRecognizerDirectionRight)
     {
         // Clearing out the textview
-        
         if ([eventList.text isEqualToString:@"Dates shown here"])
         {
             eventList.text = @"";
@@ -101,11 +105,10 @@
         // resetting the date picker
         [picker setDate:[NSDate date]];
         
+        //Animation call
         [UIView beginAnimations:nil context:nil];
-        
         [UIView setAnimationDuration:0.5];
-        listView.frame = CGRectMake(320.0f, 0.0f, listView.frame.size.width, listView.frame.size.height);
-        
+            listView.frame = CGRectMake(320.0f, 0.0f, listView.frame.size.width, listView.frame.size.height);
         [UIView commitAnimations];
      
         // Swipe Left Function
@@ -113,7 +116,6 @@
     {
                 
         [UIView beginAnimations:nil context:nil];
-        
         [UIView setAnimationDuration:0.5];
         
         if ([eventName.text isEqualToString:@""])
@@ -133,7 +135,6 @@
             //picker = (UIDatePicker*)sender;
             eventDate = picker.date;
             
-            
             // Formatting date... Thanks to the Mac Developer Library...
             NSDateFormatter *formatDate = [[NSDateFormatter alloc] init];
             [formatDate setDateStyle:NSDateFormatterMediumStyle];
@@ -147,7 +148,6 @@
             nameString = eventList.text;
             eventList.text = [NSString stringWithFormat:@"New Event: %@\nDate and Time: %@\n\n",eventName.text, formattedDateString];
             
-                        
             //This tells it to append the view with new event instead of overriding
             NSString *eventString = nameString;
             
@@ -160,7 +160,6 @@
                 eventList.text = [eventList.text stringByAppendingString:eventString];
             }
                 
-            
             // telling you that the event is saved in an alert
             UIAlertView *successAlert = [[UIAlertView alloc]initWithTitle:@"Success!" message:@"You have added a new event." delegate:nil cancelButtonTitle:@"Close" otherButtonTitles:nil];
             [successAlert show];
@@ -170,14 +169,28 @@
             eventName.text = @"";
             
             [UIView commitAnimations];
-            
-            
-        
         }
     }
         
 }
 
+// Saves eventList when Save button is pushed
+-(IBAction)onSave:(id)sender
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    if (defaults != nil)
+    {
+        NSString *eventText = eventList.text;
+        [defaults setObject:eventText forKey:@"Saved"];
+        [defaults synchronize];
+    }
+    
+    // showing alert for saving the data
+    UIAlertView *saveAlert = [[UIAlertView alloc]initWithTitle:@"Saved!" message:@"Events saved." delegate:nil cancelButtonTitle:@"Close" otherButtonTitles:nil];
+    [saveAlert show];
+
+}
 
 - (void)didReceiveMemoryWarning
 {

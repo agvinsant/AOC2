@@ -27,7 +27,6 @@
     UISwipeGestureRecognizer *rightSwipe;
     CGRect origlistViewFrame;
     NSString *nameString;
- 
 }
 @property (nonatomic, retain) IBOutlet UITextField *eventName;
 
