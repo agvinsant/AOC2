@@ -21,6 +21,7 @@
 {
     // creating the delegate tag
     id<addEventDelegate>delegate;
+    
     IBOutlet UILabel *keyboardLabel;
     IBOutlet UILabel *dateLabel;
     IBOutlet UILabel *swipeLeft;

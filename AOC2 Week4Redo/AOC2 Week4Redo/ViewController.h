@@ -18,6 +18,7 @@
     IBOutlet UIButton *save;
     UISwipeGestureRecognizer *rightSwipe;
     IBOutlet UILabel *swipeRight;
+    
     id<addEventDelegate> delegate;
 }
 

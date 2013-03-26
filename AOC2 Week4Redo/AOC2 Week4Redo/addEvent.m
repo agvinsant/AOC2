@@ -66,6 +66,7 @@
     [eventName resignFirstResponder];
 }
 
+// All this happens when the left swipe is activated. 
 -(void)onLeftSwipe:(UISwipeGestureRecognizer*)recognizerLeft
 {
     if(recognizerLeft.direction == UISwipeGestureRecognizerDirectionLeft)
