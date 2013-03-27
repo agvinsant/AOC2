@@ -26,6 +26,7 @@
 
 - (void)viewDidLoad
 {
+     
     // Setting the minimum date for the picker
     picker.minimumDate = [NSDate date];
     

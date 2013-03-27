@@ -17,6 +17,13 @@
 
 - (void)viewDidLoad
 {
+    
+    // Making sure eventList shows default text...
+    if([eventList.text isEqualToString:@""])
+    {
+        eventList.text = @"Dates shown here";
+    }
+    
     //Loads saved event
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if (defaults != nil)
